@@ -1,0 +1,564 @@
+0 verbose cli /Users/sergioperalta/.nvm/versions/node/v23.1.0/bin/node /Users/sergioperalta/.nvm/versions/node/v23.1.0/bin/npm
+1 info using npm@10.9.0
+2 info using node@v23.1.0
+3 silly config load:file:/Users/sergioperalta/.nvm/versions/node/v23.1.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/.npmrc
+5 silly config load:file:/Users/sergioperalta/.npmrc
+6 silly config load:file:/Users/sergioperalta/.nvm/versions/node/v23.1.0/etc/npmrc
+7 verbose title npm uninstall i18n
+8 verbose argv "uninstall" "i18n" "--cache" ".npm_cache"
+9 verbose logfile logs-max:10 dir:/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/.npm_cache/_logs/2026-03-21T19_06_49_585Z-
+10 verbose logfile /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/.npm_cache/_logs/2026-03-21T19_06_49_585Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly reify mark retired [
+14 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/core'
+14 silly reify ]
+15 silly reify mark retired [
+15 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/date-skeleton'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/number-skeleton'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/parser'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/runtime'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/debug'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/fast-printf'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/i18n'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/make-plural'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/math-interval-parser'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/moo'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/ms'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/mustache',
+26 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.bin/mustache'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/safe-identifier'
+27 silly reify ]
+28 silly reify moves {
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/core': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/.core-oZmGuRFo',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/date-skeleton': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/.date-skeleton-X2ipOuWA',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/number-skeleton': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/.number-skeleton-53pTkvz4',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/parser': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/.parser-RREhejlN',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/runtime': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@messageformat/.runtime-jePFES4w',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/debug': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.debug-pwYpvuLl',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/fast-printf': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.fast-printf-gVZBIxhh',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/i18n': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.i18n-GS9qFqoN',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/make-plural': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.make-plural-Ch2hOwm5',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/math-interval-parser': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.math-interval-parser-u693TJTH',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/moo': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.moo-PsQc603A',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/ms': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.ms-TKHQngak',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/mustache': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.mustache-FitBZRM2',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.bin/mustache': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.bin/.mustache-H6DmwIzz',
+28 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/safe-identifier': '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/.safe-identifier-GE4us5ke'
+28 silly reify }
+29 silly audit bulk request {
+29 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+29 silly audit   '@babel/runtime': [ '7.29.2' ],
+29 silly audit   '@esbuild/aix-ppc64': [ '0.21.5' ],
+29 silly audit   '@esbuild/android-arm': [ '0.21.5' ],
+29 silly audit   '@esbuild/android-arm64': [ '0.21.5' ],
+29 silly audit   '@esbuild/android-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/darwin-arm64': [ '0.21.5' ],
+29 silly audit   '@esbuild/darwin-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/freebsd-arm64': [ '0.21.5' ],
+29 silly audit   '@esbuild/freebsd-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-arm': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-arm64': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-ia32': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-loong64': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-mips64el': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-ppc64': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-riscv64': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-s390x': [ '0.21.5' ],
+29 silly audit   '@esbuild/linux-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/netbsd-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/openbsd-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/sunos-x64': [ '0.21.5' ],
+29 silly audit   '@esbuild/win32-arm64': [ '0.21.5' ],
+29 silly audit   '@esbuild/win32-ia32': [ '0.21.5' ],
+29 silly audit   '@esbuild/win32-x64': [ '0.21.5' ],
+29 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+29 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+29 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+29 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+29 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+29 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+29 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+29 silly audit   '@remix-run/router': [ '1.23.2' ],
+29 silly audit   '@rolldown/pluginutils': [ '1.0.0-beta.27' ],
+29 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-android-arm64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-darwin-arm64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-darwin-x64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-freebsd-x64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-openbsd-x64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.59.1' ],
+29 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.59.1' ],
+29 silly audit   '@swc/core': [ '1.15.18' ],
+29 silly audit   '@swc/core-darwin-arm64': [ '1.15.18' ],
+29 silly audit   '@swc/core-darwin-x64': [ '1.15.18' ],
+29 silly audit   '@swc/core-linux-arm-gnueabihf': [ '1.15.18' ],
+29 silly audit   '@swc/core-linux-arm64-gnu': [ '1.15.18' ],
+29 silly audit   '@swc/core-linux-arm64-musl': [ '1.15.18' ],
+29 silly audit   '@swc/core-linux-x64-gnu': [ '1.15.18' ],
+29 silly audit   '@swc/core-linux-x64-musl': [ '1.15.18' ],
+29 silly audit   '@swc/core-win32-arm64-msvc': [ '1.15.18' ],
+29 silly audit   '@swc/core-win32-ia32-msvc': [ '1.15.18' ],
+29 silly audit   '@swc/core-win32-x64-msvc': [ '1.15.18' ],
+29 silly audit   '@swc/counter': [ '0.1.3' ],
+29 silly audit   '@swc/types': [ '0.1.25' ],
+29 silly audit   '@types/estree': [ '1.0.8' ],
+29 silly audit   '@types/prop-types': [ '15.7.15' ],
+29 silly audit   '@types/react': [ '18.3.28' ],
+29 silly audit   '@types/react-dom': [ '18.3.7' ],
+29 silly audit   '@vitejs/plugin-react-swc': [ '3.11.0' ],
+29 silly audit   'any-promise': [ '1.3.0' ],
+29 silly audit   anymatch: [ '3.1.3' ],
+29 silly audit   arg: [ '5.0.2' ],
+29 silly audit   autoprefixer: [ '10.4.27' ],
+29 silly audit   'baseline-browser-mapping': [ '2.10.10' ],
+29 silly audit   'binary-extensions': [ '2.3.0' ],
+29 silly audit   braces: [ '3.0.3' ],
+29 silly audit   browserslist: [ '4.28.1' ],
+29 silly audit   'camelcase-css': [ '2.0.1' ],
+29 silly audit   'caniuse-lite': [ '1.0.30001780' ],
+29 silly audit   chokidar: [ '3.6.0' ],
+29 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+29 silly audit   commander: [ '4.1.1' ],
+29 silly audit   cssesc: [ '3.0.0' ],
+29 silly audit   csstype: [ '3.2.3' ],
+29 silly audit   didyoumean: [ '1.2.2' ],
+29 silly audit   dlv: [ '1.1.3' ],
+29 silly audit   'electron-to-chromium': [ '1.5.321' ],
+29 silly audit   esbuild: [ '0.21.5' ],
+29 silly audit   escalade: [ '3.2.0' ],
+29 silly audit   'fast-glob': [ '3.3.3' ],
+29 silly audit   fastq: [ '1.20.1' ],
+29 silly audit   'fill-range': [ '7.1.1' ],
+29 silly audit   'fraction.js': [ '5.3.4' ],
+29 silly audit   'framer-motion': [ '11.18.2' ],
+29 silly audit   fsevents: [ '2.3.3' ],
+29 silly audit   'function-bind': [ '1.1.2' ],
+29 silly audit   hasown: [ '2.0.2' ],
+29 silly audit   'html-parse-stringify': [ '3.0.1' ],
+29 silly audit   i18next: [ '25.10.2' ],
+29 silly audit   'i18next-browser-languagedetector': [ '8.2.1' ],
+29 silly audit   'is-binary-path': [ '2.1.0' ],
+29 silly audit   'is-core-module': [ '2.16.1' ],
+29 silly audit   'is-extglob': [ '2.1.1' ],
+29 silly audit   'is-glob': [ '4.0.3' ],
+29 silly audit   'is-number': [ '7.0.0' ],
+29 silly audit   jiti: [ '1.21.7' ],
+29 silly audit   'js-tokens': [ '4.0.0' ],
+29 silly audit   lilconfig: [ '3.1.3' ],
+29 silly audit   'lines-and-columns': [ '1.2.4' ],
+29 silly audit   'loose-envify': [ '1.4.0' ],
+29 silly audit   'lucide-react': [ '0.344.0' ],
+29 silly audit   merge2: [ '1.4.1' ],
+29 silly audit   micromatch: [ '4.0.8' ],
+29 silly audit   'motion-dom': [ '11.18.1' ],
+29 silly audit   'motion-utils': [ '11.18.1' ],
+29 silly audit   mz: [ '2.7.0' ],
+29 silly audit   nanoid: [ '3.3.11' ],
+29 silly audit   'node-releases': [ '2.0.36' ],
+29 silly audit   'normalize-path': [ '3.0.0' ],
+29 silly audit   'object-assign': [ '4.1.1' ],
+29 silly audit   'object-hash': [ '3.0.0' ],
+29 silly audit   'path-parse': [ '1.0.7' ],
+29 silly audit   picocolors: [ '1.1.1' ],
+29 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+29 silly audit   pify: [ '2.3.0' ],
+29 silly audit   pirates: [ '4.0.7' ],
+29 silly audit   postcss: [ '8.5.8' ],
+29 silly audit   'postcss-import': [ '15.1.0' ],
+29 silly audit   'postcss-js': [ '4.1.0' ],
+29 silly audit   'postcss-load-config': [ '6.0.1' ],
+29 silly audit   'postcss-nested': [ '6.2.0' ],
+29 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+29 silly audit   'postcss-value-parser': [ '4.2.0' ],
+29 silly audit   'queue-microtask': [ '1.2.3' ],
+29 silly audit   react: [ '18.3.1' ],
+29 silly audit   'react-dom': [ '18.3.1' ],
+29 silly audit   'react-i18next': [ '16.6.0' ],
+29 silly audit   'react-router': [ '6.30.3' ],
+29 silly audit   'react-router-dom': [ '6.30.3' ],
+29 silly audit   'read-cache': [ '1.0.0' ],
+29 silly audit   readdirp: [ '3.6.0' ],
+29 silly audit   resolve: [ '1.22.11' ],
+29 silly audit   reusify: [ '1.1.0' ],
+29 silly audit   rollup: [ '4.59.1' ],
+29 silly audit   'run-parallel': [ '1.2.0' ],
+29 silly audit   scheduler: [ '0.23.2' ],
+29 silly audit   'source-map-js': [ '1.2.1' ],
+29 silly audit   sucrase: [ '3.35.1' ],
+29 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+29 silly audit   tailwindcss: [ '3.4.19' ],
+29 silly audit   thenify: [ '3.3.1' ],
+29 silly audit   'thenify-all': [ '1.6.0' ],
+29 silly audit   tinyglobby: [ '0.2.15' ],
+29 silly audit   fdir: [ '6.5.0' ],
+29 silly audit   'to-regex-range': [ '5.0.1' ],
+29 silly audit   'ts-interface-checker': [ '0.1.13' ],
+29 silly audit   tslib: [ '2.8.1' ],
+29 silly audit   'update-browserslist-db': [ '1.2.3' ],
+29 silly audit   'use-sync-external-store': [ '1.6.0' ],
+29 silly audit   'util-deprecate': [ '1.0.2' ],
+29 silly audit   vite: [ '5.4.21' ],
+29 silly audit   'void-elements': [ '3.1.0' ]
+29 silly audit }
+30 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-x64-msvc
+31 silly reify mark deleted [
+31 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-x64-msvc'
+31 silly reify ]
+32 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-ia32-msvc
+33 silly reify mark deleted [
+33 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-ia32-msvc'
+33 silly reify ]
+34 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-arm64-msvc
+35 silly reify mark deleted [
+35 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-win32-arm64-msvc'
+35 silly reify ]
+36 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-x64-musl
+37 silly reify mark deleted [
+37 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-x64-musl'
+37 silly reify ]
+38 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-x64-gnu
+39 silly reify mark deleted [
+39 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-x64-gnu'
+39 silly reify ]
+40 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm64-musl
+41 silly reify mark deleted [
+41 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm64-musl'
+41 silly reify ]
+42 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm64-gnu
+43 silly reify mark deleted [
+43 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm64-gnu'
+43 silly reify ]
+44 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm-gnueabihf
+45 silly reify mark deleted [
+45 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-linux-arm-gnueabihf'
+45 silly reify ]
+46 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-darwin-x64
+47 silly reify mark deleted [
+47 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@swc/core-darwin-x64'
+47 silly reify ]
+48 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-x64-msvc
+49 silly reify mark deleted [
+49 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-x64-msvc'
+49 silly reify ]
+50 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-x64-gnu
+51 silly reify mark deleted [
+51 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-x64-gnu'
+51 silly reify ]
+52 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-ia32-msvc
+53 silly reify mark deleted [
+53 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-ia32-msvc'
+53 silly reify ]
+54 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-arm64-msvc
+55 silly reify mark deleted [
+55 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-win32-arm64-msvc'
+55 silly reify ]
+56 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-openharmony-arm64
+57 silly reify mark deleted [
+57 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-openharmony-arm64'
+57 silly reify ]
+58 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-openbsd-x64
+59 silly reify mark deleted [
+59 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-openbsd-x64'
+59 silly reify ]
+60 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-x64-musl
+61 silly reify mark deleted [
+61 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-x64-musl'
+61 silly reify ]
+62 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-x64-gnu
+63 silly reify mark deleted [
+63 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-x64-gnu'
+63 silly reify ]
+64 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-s390x-gnu
+65 silly reify mark deleted [
+65 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-s390x-gnu'
+65 silly reify ]
+66 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-riscv64-musl
+67 silly reify mark deleted [
+67 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-riscv64-musl'
+67 silly reify ]
+68 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-riscv64-gnu
+69 silly reify mark deleted [
+69 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-riscv64-gnu'
+69 silly reify ]
+70 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-ppc64-musl
+71 silly reify mark deleted [
+71 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-ppc64-musl'
+71 silly reify ]
+72 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-ppc64-gnu
+73 silly reify mark deleted [
+73 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-ppc64-gnu'
+73 silly reify ]
+74 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-loong64-musl
+75 silly reify mark deleted [
+75 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-loong64-musl'
+75 silly reify ]
+76 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-loong64-gnu
+77 silly reify mark deleted [
+77 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-loong64-gnu'
+77 silly reify ]
+78 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm64-musl
+79 silly reify mark deleted [
+79 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm64-musl'
+79 silly reify ]
+80 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm64-gnu
+81 silly reify mark deleted [
+81 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm64-gnu'
+81 silly reify ]
+82 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm-musleabihf
+83 silly reify mark deleted [
+83 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm-musleabihf'
+83 silly reify ]
+84 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm-gnueabihf
+85 silly reify mark deleted [
+85 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+85 silly reify ]
+86 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-freebsd-x64
+87 silly reify mark deleted [
+87 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-freebsd-x64'
+87 silly reify ]
+88 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-freebsd-arm64
+89 silly reify mark deleted [
+89 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-freebsd-arm64'
+89 silly reify ]
+90 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-darwin-x64
+91 silly reify mark deleted [
+91 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-darwin-x64'
+91 silly reify ]
+92 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-android-arm64
+93 silly reify mark deleted [
+93 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-android-arm64'
+93 silly reify ]
+94 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-android-arm-eabi
+95 silly reify mark deleted [
+95 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@rollup/rollup-android-arm-eabi'
+95 silly reify ]
+96 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-x64
+97 silly reify mark deleted [
+97 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-x64'
+97 silly reify ]
+98 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-ia32
+99 silly reify mark deleted [
+99 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-ia32'
+99 silly reify ]
+100 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-arm64
+101 silly reify mark deleted [
+101 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/win32-arm64'
+101 silly reify ]
+102 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/sunos-x64
+103 silly reify mark deleted [
+103 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/sunos-x64'
+103 silly reify ]
+104 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/openbsd-x64
+105 silly reify mark deleted [
+105 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/openbsd-x64'
+105 silly reify ]
+106 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/netbsd-x64
+107 silly reify mark deleted [
+107 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/netbsd-x64'
+107 silly reify ]
+108 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-x64
+109 silly reify mark deleted [
+109 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-x64'
+109 silly reify ]
+110 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-s390x
+111 silly reify mark deleted [
+111 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-s390x'
+111 silly reify ]
+112 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-riscv64
+113 silly reify mark deleted [
+113 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-riscv64'
+113 silly reify ]
+114 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-ppc64
+115 silly reify mark deleted [
+115 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-ppc64'
+115 silly reify ]
+116 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-mips64el
+117 silly reify mark deleted [
+117 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-mips64el'
+117 silly reify ]
+118 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-loong64
+119 silly reify mark deleted [
+119 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-loong64'
+119 silly reify ]
+120 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-ia32
+121 silly reify mark deleted [
+121 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-ia32'
+121 silly reify ]
+122 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-arm64
+123 silly reify mark deleted [
+123 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-arm64'
+123 silly reify ]
+124 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-arm
+125 silly reify mark deleted [
+125 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/linux-arm'
+125 silly reify ]
+126 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/freebsd-x64
+127 silly reify mark deleted [
+127 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/freebsd-x64'
+127 silly reify ]
+128 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/freebsd-arm64
+129 silly reify mark deleted [
+129 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/freebsd-arm64'
+129 silly reify ]
+130 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/darwin-x64
+131 silly reify mark deleted [
+131 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/darwin-x64'
+131 silly reify ]
+132 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-x64
+133 silly reify mark deleted [
+133 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-x64'
+133 silly reify ]
+134 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-arm64
+135 silly reify mark deleted [
+135 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-arm64'
+135 silly reify ]
+136 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-arm
+137 silly reify mark deleted [
+137 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/android-arm'
+137 silly reify ]
+138 verbose reify failed optional dependency /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/aix-ppc64
+139 silly reify mark deleted [
+139 silly reify   '/Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website/node_modules/@esbuild/aix-ppc64'
+139 silly reify ]
+140 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 374ms
+141 silly audit report {
+141 silly audit report   esbuild: [
+141 silly audit report     {
+141 silly audit report       id: 1102341,
+141 silly audit report       url: 'https://github.com/advisories/GHSA-67mh-4wv8-2f99',
+141 silly audit report       title: 'esbuild enables any website to send any requests to the development server and read the response',
+141 silly audit report       severity: 'moderate',
+141 silly audit report       vulnerable_versions: '<=0.24.2',
+141 silly audit report       cwe: [Array],
+141 silly audit report       cvss: [Object]
+141 silly audit report     }
+141 silly audit report   ]
+141 silly audit report }
+142 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+143 http fetch GET 200 https://registry.npmjs.org/esbuild 7ms (cache hit)
+144 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:880945 disposed:false
+145 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+146 http fetch GET 200 https://registry.npmjs.org/vite 5ms (cache hit)
+147 silly packumentCache corgi:https://registry.npmjs.org/vite set size:2202471 disposed:false
+148 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react-swc cache-miss
+149 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-react-swc 11ms (cache hit)
+150 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react-swc set size:37133 disposed:false
+151 silly ADD
+152 silly ADD
+153 silly ADD
+154 silly ADD
+155 silly ADD
+156 silly ADD
+157 silly ADD
+158 silly ADD
+159 silly ADD
+160 silly ADD
+161 silly ADD
+162 silly ADD
+163 silly ADD
+164 silly ADD
+165 silly ADD
+166 silly ADD
+167 silly ADD
+168 silly ADD
+169 silly ADD
+170 silly ADD
+171 silly ADD
+172 silly ADD
+173 silly ADD
+174 silly ADD
+175 silly ADD
+176 silly ADD
+177 silly ADD
+178 silly ADD
+179 silly ADD
+180 silly ADD
+181 silly ADD
+182 silly ADD
+183 silly ADD
+184 silly ADD
+185 silly ADD
+186 silly ADD
+187 silly ADD
+188 silly ADD
+189 silly ADD
+190 silly ADD
+191 silly ADD
+192 silly ADD
+193 silly ADD
+194 silly ADD
+195 silly ADD
+196 silly ADD
+197 silly ADD
+198 silly ADD
+199 silly ADD
+200 silly ADD
+201 silly ADD
+202 silly ADD
+203 silly ADD
+204 silly ADD
+205 silly ADD
+206 silly REMOVE node_modules/safe-identifier
+207 silly REMOVE node_modules/mustache
+208 silly REMOVE node_modules/ms
+209 silly REMOVE node_modules/moo
+210 silly REMOVE node_modules/math-interval-parser
+211 silly REMOVE node_modules/make-plural
+212 silly REMOVE node_modules/i18n
+213 silly REMOVE node_modules/fast-printf
+214 silly REMOVE node_modules/debug
+215 silly REMOVE node_modules/@messageformat/runtime
+216 silly REMOVE node_modules/@messageformat/parser
+217 silly REMOVE node_modules/@messageformat/number-skeleton
+218 silly REMOVE node_modules/@messageformat/date-skeleton
+219 silly REMOVE node_modules/@messageformat/core
+220 verbose cwd /Users/sergioperalta/Documents/Source/alimentos-san-geronimo-website
+221 verbose os Darwin 25.2.0
+222 verbose node v23.1.0
+223 verbose npm  v10.9.0
+224 verbose exit 0
+225 info ok

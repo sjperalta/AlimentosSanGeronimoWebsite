@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Alimentos San Geronimo | Heritage & Innovation</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- React and Router CDNs -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/history@5/umd/history.development.js"></script>
+    <script src="https://unpkg.com/react-router@6.3.0/umd/react-router.development.js"></script>
+    <script src="https://unpkg.com/react-router-dom@6.3.0/umd/react-router-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#00210a",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#91db2a",
+                        "on-secondary-container": "#663500",
+                        "secondary-fixed-dim": "#ffb77d",
+                        "surface-tint": "#006d30",
+                        "on-primary-container": "#d3ffd5",
+                        "primary": "#00652c",
+                        "secondary": "#904d00",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#233144",
+                        "background": "#f8f9ff",
+                        "tertiary": "#3b6100",
+                        "on-surface-variant": "#3f493f",
+                        "on-secondary-fixed": "#2f1500",
+                        "tertiary-container": "#4d7c00",
+                        "surface-container": "#e6eeff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#0d1c2e",
+                        "surface-variant": "#d5e3fc",
+                        "on-tertiary-fixed": "#102000",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#79db8d",
+                        "primary-container": "#15803d",
+                        "surface-container-highest": "#d5e3fc",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-background": "#0d1c2e",
+                        "secondary-container": "#fe932c",
+                        "primary-fixed-dim": "#79db8d",
+                        "on-secondary-fixed-variant": "#6e3900",
+                        "on-tertiary-fixed-variant": "#304f00",
+                        "outline-variant": "#becabc",
+                        "outline": "#6f7a6e",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed": "#ffdcc3",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#95f8a7",
+                        "tertiary-fixed": "#acf847",
+                        "surface-bright": "#f8f9ff",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "surface-dim": "#ccdbf3",
+                        "on-primary-fixed-variant": "#005323",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#dfffb3",
+                        "error": "#ba1a1a"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "manrope": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brand-font { font-family: 'Manrope', sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { createRoot } = ReactDOM;
+        const { MemoryRouter, Routes, Route, Link, useNavigate, useLocation } = ReactRouterDOM;
+
+        // --- Shared Components ---
+
+        const TopNavBar = () => {
+            const location = useLocation();
+            const isActive = (path) => location.pathname === path;
+            
+            return (
+                <nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl shadow-sm dark:shadow-none">
+                    <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+                        <Link to="/" class="text-xl font-extrabold tracking-tighter text-green-900 dark:text-green-50 brand-font">
+                            Alimentos San Geronimo
+                        </Link>
+                        <div class="hidden md:flex items-center space-x-8">
+                            <Link 
+                                class={`font-manrope text-sm font-semibold tracking-wide uppercase transition-all duration-300 pb-1 ${isActive('/') ? 'text-green-700 dark:text-green-400 border-b-2 border-green-700 dark:border-green-400' : 'text-slate-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-200'}`} 
+                                to="/"
+                            >Home</Link>
+                            <Link 
+                                class={`font-manrope text-sm font-semibold tracking-wide uppercase transition-all duration-300 pb-1 ${isActive('/products') ? 'text-green-700 dark:text-green-400 border-b-2 border-green-700 dark:border-green-400' : 'text-slate-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-200'}`} 
+                                to="/products"
+                            >Products</Link>
+                            <Link 
+                                class={`font-manrope text-sm font-semibold tracking-wide uppercase transition-all duration-300 pb-1 ${isActive('/about') ? 'text-green-700 dark:text-green-400 border-b-2 border-green-700 dark:border-green-400' : 'text-slate-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-200'}`} 
+                                to="/about"
+                            >About Us</Link>
+                            <Link 
+                                class={`font-manrope text-sm font-semibold tracking-wide uppercase transition-all duration-300 pb-1 ${isActive('/contact') ? 'text-green-700 dark:text-green-400 border-b-2 border-green-700 dark:border-green-400' : 'text-slate-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-200'}`} 
+                                to="/contact"
+                            >Contact</Link>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-sm hover:scale-105 active:opacity-80 active:scale-95 transition-all">
+                                WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            );
+        };
+
+        const Footer = () => (
+            <footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 font-inter text-sm leading-relaxed">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
+                    <div class="space-y-4">
+                        <div class="text-lg font-bold text-green-900 dark:text-green-100 brand-font">Alimentos San Geronimo</div>
+                        <p class="text-slate-500 dark:text-slate-400">Excelencia agrícola centroamericana, exportando frescura y calidad desde hace décadas.</p>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <h5 class="font-bold text-green-800 dark:text-green-400 mb-2 uppercase tracking-widest text-xs">Sedes</h5>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Honduras Office</a>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Guatemala Office</a>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <h5 class="font-bold text-green-800 dark:text-green-400 mb-2 uppercase tracking-widest text-xs">Legal</h5>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+                        <a class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors" href="#">Sustainability Report</a>
+                    </div>
+                    <div class="space-y-4">
+                        <h5 class="font-bold text-green-800 dark:text-green-400 mb-2 uppercase tracking-widest text-xs">Newsletter</h5>
+                        <div class="flex">
+                            <input class="bg-white dark:bg-slate-900 border-none rounded-l-lg w-full focus:ring-1 focus:ring-green-500 text-sm" placeholder="Email" type="email"/>
+                            <button class="bg-green-800 text-white px-4 rounded-r-lg hover:bg-green-700 transition-colors">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400 text-xs">
+                    <div>© 2024 Alimentos San Geronimo. Heritage & Innovation.</div>
+                    <div class="flex gap-6">
+                        <span>Facebook</span>
+                        <span>Instagram</span>
+                        <span>LinkedIn</span>
+                    </div>
+                </div>
+            </footer>
+        );
+
+        // --- Page Components ---
+
+        const HomePage = () => {
+            const navigate = useNavigate();
+            return (
+                <div className="pt-20">
+                    {/* Hero Section */}
+                    <section class="relative min-h-[921px] flex items-center px-8 py-20 overflow-hidden">
+                        <div class="absolute inset-0 z-0">
+                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA97gC7twp2sW5kLR91pxWDaXSS8v7BhIAqRxkUmyOk9RnkDjBVA34OZ0akr_bB1Eh_JYuIFplCn-ywV_yoOClKxJW9q4pvBNfuFoRWHh_dX8f58gZxY4KPA3xp_kraxk8pvcHcD8nzMALOtSRzD_S5hYLi3I0-a8eYPSoQ7QOVUtMXcomjfXaGUYeorA1Ld42srkWenUAwDcdiBu79tT02Fbffx4mfoB6RgPDU30S8kcRoGBe4spC6vrpFAxAEvyCqNVu4o1CvkYPe"/>
+                            <div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/80 to-transparent"></div>
+                        </div>
+                        <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-8">
+                                <span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold text-xs uppercase tracking-widest">
+                                    Fundada en 1985
+                                </span>
+                                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight">
+                                    De la tierra a tu mesa, <span class="text-primary-fixed">con raíces firmes</span>
+                                </h1>
+                                <p class="text-xl text-surface-variant/90 max-w-lg leading-relaxed font-body">
+                                    Conectamos el campo con tu negocio en Honduras y Guatemala a través de procesos sostenibles y calidad de exportación.
+                                </p>
+                                <div class="flex flex-wrap gap-4 pt-4">
+                                    <button onClick={() => navigate('/products')} class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                                        Ver productos
+                                    </button>
+                                    <button onClick={() => navigate('/contact')} class="px-8 py-4 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+                                        Contactar ahora
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Business Lines */}
+                    <section class="py-32 px-8 bg-surface">
+                        <div class="max-w-7xl mx-auto">
+                            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                                <div class="max-w-2xl">
+                                    <h2 class="text-4xl md:text-5xl font-bold text-on-surface mb-6">Nuestras Líneas de Negocio</h2>
+                                    <p class="text-on-surface-variant text-lg leading-relaxed">Diversidad agrícola con el rigor técnico que su empresa necesita para prosperar.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                                <div onClick={() => navigate('/products')} class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low h-[500px] cursor-pointer">
+                                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw529R2Yi2UwkE20TM-cJed5VyRDbDBAkv6TN2nxOlqOLBmShBM5-DMHueWnR24pbpcfN3h00Cb-X9kMoG69ycnIQvY9y8Mg4qa9FDwcWk36tsYTP5-P--6cNbp0bJJRSUfx8XVbj66pCokKIWbV3C747Gg0tk5Yln_2OVIQzIjjJEJjTeH51MOyS4NWuKC-CjO-NGTaA9zkKbrTE92d_Y4bXID1dr-PNfGarqNLeL4odAe9txRmjQVu_Fd26MZ_eOLkzICnFVah1a"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div>
+                                    <div class="absolute bottom-0 p-10 space-y-4">
+                                        <h3 class="text-3xl font-bold text-white">Ginger & Turmeric</h3>
+                                        <p class="text-surface-variant/80 max-w-md">Raíces seleccionadas manualmente con altos estándares de pureza y sabor para el mercado regional.</p>
+                                        <span class="inline-flex items-center text-primary-fixed font-bold gap-2">Explorar categoría <span class="material-symbols-outlined">arrow_forward</span></span>
+                                    </div>
+                                </div>
+                                <div onClick={() => navigate('/products')} class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low h-[500px] cursor-pointer">
+                                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqV3zARHBZAKyPjdane0KtlYCf7Z0tPebQa9xpOLxcDJTlFkq-dPHJNq9B0p5IWLKVHS9cKy87nWNVcYBIcxYcgIiVEnPR5tHFFlHLp7Nz53I7oR0AO5zoFpW-lMEUqjEohtCwqXZXQFg-lK0ZJ-_T5LPFqUR89KupA1Cp2SQH8ZEfWCQnL4O4STBlaF_WnLjZBWn2fIhqhULO9FQYf34N2NcFpz1-2ZPuxFACTt-x40HIUwti2xn2qD81ECT420iPRw5m5GMJyhI9"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div>
+                                    <div class="absolute bottom-0 p-10 space-y-4">
+                                        <h3 class="text-3xl font-bold text-white">Vegetales Frescos</h3>
+                                        <p class="text-surface-variant/80">Cosecha del día garantizando frescura y vida útil prolongada.</p>
+                                    </div>
+                                </div>
+                                <div onClick={() => navigate('/products')} class="md:col-span-12 group relative overflow-hidden rounded-xl bg-surface-container-low h-[400px] cursor-pointer">
+                                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQsexkjwXE3jZDnpdQR8s6paJ6qBYOnda24p5jsVEinHNEVoUdDMYLwkrBkBkSniu0uTf5QNkKk68Hy7kTWWnlMg71YVjJdfTx9e8neTNDd5VzCbchFcfZGQCnUWpyfnBy8gIB2Qz4B-QtPDTLQ4naJsy5Gw1u_e3Y72mTF6gl4algvL_2vMB59fgjW0myc2VZts-eWIvXmyq82lmNtOlwQvarPOWf8oSYTPMv1MeLd-vJwbx5T95mocvNIqjGM2FNgg1aHF8wYxUP"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+                                    <div class="absolute bottom-0 p-10 flex flex-col md:flex-row justify-between items-end w-full">
+                                        <div class="space-y-2 text-left">
+                                            <h3 class="text-3xl font-bold text-white">Gramas y Ornamentales</h3>
+                                            <p class="text-surface-variant/80 max-w-xl">Soluciones paisajísticas de alta resistencia para proyectos comerciales y residenciales.</p>
+                                        </div>
+                                        <button class="mt-6 md:mt-0 px-6 py-3 bg-white text-on-surface font-bold rounded-full hover:bg-primary hover:text-white transition-colors">Ver Catálogo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Legacy Section */}
+                    <section class="py-32 bg-surface-container-low relative overflow-hidden">
+                        <div class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-20">
+                            <div class="lg:w-1/2 relative">
+                                <div class="aspect-square rounded-xl overflow-hidden shadow-2xl">
+                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPw4J_azYc-qKqaiVY93NVY0T5PizPfm8qfixPuhXl8mSymeilUKC2qbIFQ7jNrRxnucq_LTqQesV2-kzcgMKKQYfltDS4DURJmPoB6ILA4b86mCMsE7QQxp_E4BAORkY60Mj1AzD4qLky-fzAJoWlNXhgHJUzlsyaH37-5zgeDwcNkDAjd5MeYrnO5zAcnzwCUbK6LcxnkQ0iW5Cy-Uo7v66FDHXSF89JX2bMLXkHHtqqwPr5lmTNMEbakYb0-FSL3BCR51o0VQRK"/>
+                                </div>
+                                <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-xl shadow-xl max-w-xs hidden md:block">
+                                    <p class="font-headline font-bold text-primary text-2xl italic">"La tierra no es una herencia, es un préstamo de nuestros hijos."</p>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/2 space-y-8 text-left">
+                                <label class="text-secondary font-bold tracking-[0.2em] uppercase text-sm">Nuestra Herencia</label>
+                                <h2 class="text-4xl md:text-5xl font-extrabold text-on-surface leading-tight">Pompilio Sagastume: <br/>Un Legado de Integridad</h2>
+                                <p class="text-on-surface-variant text-lg leading-relaxed">
+                                    Fundada sobre la visión de Don Pompilio Sagastume, Alimentos San Geronimo no solo produce alimentos; cultiva relaciones de confianza. Lo que comenzó como un pequeño sueño en el corazón de Honduras, hoy es un pilar de la agroindustria regional.
+                                </p>
+                                <button onClick={() => navigate('/about')} class="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all group">
+                                    Leer más sobre nuestra historia
+                                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+
+        const AboutPage = () => {
+            return (
+                <div class="pt-24">
+                    <section class="max-w-7xl mx-auto px-8 py-20">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <div class="space-y-8 text-left">
+                                <div class="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                                    <span class="material-symbols-outlined text-sm">history_edu</span>
+                                    Our Heritage
+                                </div>
+                                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                                    Cultivating a <span class="text-primary">Visionary</span> Legacy.
+                                </h1>
+                                <p class="text-lg text-on-surface-variant leading-relaxed max-w-xl">
+                                    Since our inception, Alimentos San Geronimo has stood as a beacon of agricultural excellence, blending time-honored traditions with modern precision to nourish the future.
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <div class="w-full h-[500px] rounded-xl overflow-hidden shadow-2xl">
+                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Sgui4QROb47tR1kSQuGaGojMx2pyREqKRGkog6G3QfV36ZKpE9Nqei93YtmqV8HiEPEyVRRePqGqJrMLoAA3kdT1VkJOw_afqHJpOMflsyOAXnEJuv3DLm_v-v7es7WOKl3B6AaoccjBphv0h8WO9Ba_oHPaMEs-9gC7mE2wIoGkJEa3axBKdFpEatRM-RoceW5ZLTzKopHkJoi9DcxQbASGIF37mt7Fm5yWX6_GKfTm_6m5brlk52p1YcNEqZhPBXdIWsmREgx8"/>
+                                </div>
+                                <div class="absolute -bottom-10 -left-10 bg-surface-container-lowest p-8 rounded-lg shadow-xl max-w-xs hidden md:block">
+                                    <p class="font-headline font-bold text-primary text-xl">"The earth gives what the hand creates with love."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-surface-container-low py-32">
+                        <div class="max-w-7xl mx-auto px-8">
+                            <div class="flex flex-col md:flex-row gap-20 items-center">
+                                <div class="w-full md:w-1/2 order-2 md:order-1">
+                                    <div class="relative">
+                                        <div class="aspect-[4/5] bg-surface rounded-xl overflow-hidden shadow-sm">
+                                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzNu7hsemxzXU8QLWv0GRorq9qhvl6r_evYCButXyF9fuu2KZqbEdZw8T6Sj1RiLUlO05W5kY9UB1sAAMd5at2kruYvoyGc8grVidOBh5k6JAje0K2VK4qmmJm3ZU4UYEOvm11qvC_ZD2yy1QnnVVWsLiUkI1QvzvJKp_PbLAh5ShAUeufTMmf8lQTVwLIagf7Yjd_m2_YfyfI46c3ft7G60qsBzD7h3aUj0SOERN1I05Ljp4bDJ02MZiQqnPlmc2Rd8nTnxz0ELsb"/>
+                                        </div>
+                                        <div class="absolute top-8 right-[-2rem] bg-secondary-container text-on-secondary-container p-6 rounded-lg rotate-3 shadow-lg">
+                                            <p class="font-headline font-extrabold text-2xl">Pompilio Sagastume</p>
+                                            <p class="text-sm font-medium opacity-90 uppercase tracking-widest">Founder & Visionary</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 order-1 md:order-2 space-y-8 text-left">
+                                    <h2 class="text-4xl font-extrabold tracking-tight text-on-surface">The Soul of San Geronimo</h2>
+                                    <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                                        <p>
+                                            Pompilio Sagastume didn't just see land; he saw a responsibility. His life was a testament to the belief that discipline is the foundation of growth.
+                                        </p>
+                                        <p>
+                                            Every furrow plowed and every seed planted under his watch was done with a standard of excellence that defines us today. He taught us that respect for the land is respect for ourselves.
+                                        </p>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-outline-variant/30">
+                                        <div class="text-center group">
+                                            <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mx-auto mb-3">
+                                                <span class="material-symbols-outlined">psychology</span>
+                                            </div>
+                                            <p class="text-xs font-bold uppercase tracking-tighter">Vision</p>
+                                        </div>
+                                        <div class="text-center group">
+                                            <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mx-auto mb-3">
+                                                <span class="material-symbols-outlined">handshake</span>
+                                            </div>
+                                            <p class="text-xs font-bold uppercase tracking-tighter">Honesty</p>
+                                        </div>
+                                        <div class="text-center group">
+                                            <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mx-auto mb-3">
+                                                <span class="material-symbols-outlined">fitness_center</span>
+                                            </div>
+                                            <p class="text-xs font-bold uppercase tracking-tighter">Discipline</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+
+        const ProductsPage = () => {
+            return (
+                <main class="pt-32 pb-20">
+                    <header class="max-w-7xl mx-auto px-8 mb-20">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="space-y-6 text-left">
+                                <span class="text-secondary font-label text-sm font-bold tracking-[0.05em] uppercase">Our Legacy in Every Harvest</span>
+                                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tighter text-on-surface leading-tight">
+                                    Premium Agricultural <span class="text-primary">Excellence</span>
+                                </h1>
+                                <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                                    From the fertile soils of Central America to the world. Explore our meticulously cultivated catalog of fresh produce and architectural landscaping solutions.
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKsPOK_cn0Z76KgzVNVFmjNNezxiK11MhB40vI-dgOW5kWZcezJyKIZ0YY-eX4cpsQNof8hgGY0H9mkbDF8XEuS0C62kN1jBggg7aqtGTlhXceH8GZMwzM3U4WyoxadTwT5frr3fpdLaueLBNxn1gRXRytDCj7bwk3gL2WSTs5xltcnfUVKpwDIb5w5YWnvM-xcL0cofmd-rzZJtiWfiS6zU4xxarkxjPnrHebat4z8HflSEFF0EA5S9NblKrmh2VizoUYj4AK9Ngc"/>
+                                </div>
+                                <div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-lg shadow-2xl max-w-xs hidden md:block">
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <span class="material-symbols-outlined text-primary text-4xl">verified</span>
+                                        <span class="font-headline font-bold text-lg">Global Standards</span>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant">Exporting quality to markets across Honduras, Guatemala, and beyond.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    <section class="bg-surface-container-low py-24">
+                        <div class="max-w-7xl mx-auto px-8">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                                <div class="lg:col-span-5 space-y-8 text-left">
+                                    <div class="space-y-4">
+                                        <span class="text-secondary font-label text-xs font-bold tracking-widest uppercase">Wholesale Solutions</span>
+                                        <h2 class="text-4xl font-bold tracking-tight">Ginger & Turmeric</h2>
+                                        <p class="text-on-surface-variant leading-relaxed">
+                                            Our flagship roots are grown with precision. We focus on high-potency, clean, and large-hand varieties specifically curated for international wholesale.
+                                        </p>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-center gap-3 text-on-surface">
+                                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                                            <span>High-quality fresh roots, harvested daily</span>
+                                        </li>
+                                        <li class="flex items-center gap-3 text-on-surface">
+                                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                                            <span>Customizable bulk packaging options</span>
+                                        </li>
+                                    </ul>
+                                    <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-all">
+                                        Request Quote
+                                    </button>
+                                </div>
+                                <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                                    <div class="space-y-4 pt-12">
+                                        <div class="rounded-xl overflow-hidden aspect-[3/4] bg-surface-container-high">
+                                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkF5hhFz80R75W-tODYIBu17JfEuce1bLdSHiiZCYhjy__SvPv405j0mtI8kvS6wYBQNLWzCJScXi5noQcvSiiqfRwT80O1c571z1eu3PvMdu1kxllyti4cb6jqJXWLs2njJoshVhashINFGlc3EcWB0CU9j0J-XR9a63rEuFJq73eYW23zUZBTce_bUSZuyWkXn4Ky2xsdKBBg6la3l2Qx3kuK_JxQkA5-cttssGoj6RUabVqqgSq2TYwED6jb6mHmp-6WqFAPYVD"/>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="rounded-xl overflow-hidden aspect-square bg-surface-container-high">
+                                            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD99ExYOsHvosHJXgrRPOo55OmjeZv8DA1-xlwZAV_z-hoZkftR4Kpi-SyG0RLMpQQ2kd54CZL82rwt_lrV06pEa1B8yfXnx7lw-Kq59yevI6DTAc1bhft7wu29rC56DDXzB5aKkjROBocgExgVB4Qeh4bGYyjNS1onvfsGBWS0Kc0vqBFcFIPnUo2SVPVSXK-mohN7SMhhdIOixq0RBC8ExxxLh8zpo8vX-L1clg6VZH-oz6P-5k7lXD1wPB5EvTkWNftGK1eGdbbo"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const ContactPage = () => {
+            return (
+                <main class="pt-24 pb-20">
+                    <section class="max-w-7xl mx-auto px-8 mb-20">
+                        <div class="relative rounded-xl overflow-hidden min-h-[400px] flex items-end p-12">
+                            <img class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFVXSn1_beUgdHWsYaGZugVgrtOtKvoUWxjAv6K9bWMxIRojQxRNFvZ4fC7nJ3DFfqEL1klXILywt0QmVsLSnAj2M2b7fZXMS-ENxuwIfH_FBhfwP7mNI2FTbGgWKSCd_W-LvCRm52nNri8upmlrdh3pu0vqRzvIlafDko8fI0bXBwznJTgZuJJc_2eRDwMuDgn80h5HZD1a-047KhsoEkI5Yf7fEKiuCLOEUJ4nB16M1X5BapfmJp3uBAwibBR-E3Hgym3V18VHt7"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-on-surface/20 to-transparent"></div>
+                            <div class="relative z-10 max-w-2xl text-left">
+                                <span class="inline-block px-4 py-1 rounded-full bg-tertiary/20 text-tertiary-fixed font-label text-xs font-bold uppercase tracking-widest mb-4">Get in Touch</span>
+                                <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">Estamos listos para atenderte</h1>
+                                <p class="text-white/80 text-lg max-w-lg leading-relaxed">Connecting heritage with innovation across borders.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+                        <div class="lg:col-span-5 space-y-8 text-left">
+                            <div class="bg-surface-container-low rounded-lg p-10">
+                                <h2 class="font-headline text-3xl font-bold text-ink mb-8">Regional Offices</h2>
+                                <div class="space-y-12">
+                                    <div class="flex items-start gap-4">
+                                        <div class="bg-primary-container/20 p-3 rounded-2xl">
+                                            <span class="material-symbols-outlined text-primary">location_on</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-headline text-xl font-bold text-ink mb-1">Honduras Office</h3>
+                                            <p class="text-on-surface-variant font-medium mb-4">Main Distribution Center</p>
+                                            <div class="space-y-2">
+                                                <a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="mailto:info@sangeronimofoods.com">
+                                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                                    info@sangeronimofoods.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div class="bg-secondary-container/20 p-3 rounded-2xl">
+                                            <span class="material-symbols-outlined text-secondary">location_on</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-headline text-xl font-bold text-ink mb-1">Guatemala Office</h3>
+                                            <p class="text-on-surface-variant font-medium mb-4">Operations & Exports</p>
+                                            <div class="space-y-2">
+                                                <a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="mailto:cristofer.sagastume@sangeronimofoods.com">
+                                                    <span class="material-symbols-outlined text-sm">mail</span>
+                                                    cristofer.sagastume@sangeronimofoods.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7">
+                            <div class="bg-surface-container-lowest rounded-lg p-12 border border-outline-variant/10 shadow-sm text-left">
+                                <h2 class="font-headline text-4xl font-extrabold text-ink mb-4">Send us a Message</h2>
+                                <form action="#" class="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div class="space-y-2">
+                                            <label class="font-label text-xs font-bold uppercase tracking-widest text-secondary">Full Name</label>
+                                            <input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 p-4 rounded-t-lg" placeholder="John Doe" type="text"/>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <label class="font-label text-xs font-bold uppercase tracking-widest text-secondary">Email Address</label>
+                                            <input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 p-4 rounded-t-lg" placeholder="john@example.com" type="email"/>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="font-label text-xs font-bold uppercase tracking-widest text-secondary">Message</label>
+                                        <textarea class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 p-4 rounded-t-lg resize-none" rows="4" placeholder="How can we help?"></textarea>
+                                    </div>
+                                    <button class="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-headline font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                                        Send Inquiry
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            );
+        };
+
+        const ScrollToTop = () => {
+            const { pathname } = useLocation();
+            useEffect(() => {
+                window.scrollTo(0, 0);
+            }, [pathname]);
+            return null;
+        };
+
+        const App = () => {
+            return (
+                <MemoryRouter>
+                    <ScrollToTop />
+                    <TopNavBar />
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/products" element={<ProductsPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                    <Footer />
+                </MemoryRouter>
+            );
+        };
+
+        const container = document.getElementById('root');
+        const root = createRoot(container);
+        root.render(<App />);
+    </script>
+</body>
+</html>
