@@ -36,6 +36,13 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Debug build output
+        run: |
+          echo "Checking dist folder structure:"
+          ls -R dist
+          echo "Inspecting dist/index.html content:"
+          cat dist/index.html
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
