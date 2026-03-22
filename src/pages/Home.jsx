@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="pt-16 overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center px-8 py-20 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center px-8 py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <motion.img
             initial={{ scale: 1.1 }}
@@ -32,9 +32,9 @@ const Home = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-10 text-left lg:pr-12"
+              className="space-y-8 text-left lg:pr-12"
             >
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <motion.span
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -43,11 +43,11 @@ const Home = () => {
                 >
                   {t('hero.legacy')}
                 </motion.span>
-                <h1 className="text-6xl md:text-8xl lg:text-[100px] font-extrabold text-white leading-[0.95] tracking-tight drop-shadow-2xl">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tight drop-shadow-2xl">
                   {t('hero.title').split(' ').slice(0, -2).join(' ')} <br />
                   <span className="text-primary-fixed">{t('hero.title').split(' ').slice(-2).join(' ')}</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed font-body drop-shadow-md">
+                <p className="text-lg md:text-xl text-white/80 max-w-lg leading-relaxed font-body drop-shadow-md">
                   {t('hero.subtitle')}
                 </p>
               </div>
@@ -118,7 +118,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               onClick={() => navigate('/products')}
-              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[550px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               <img 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
@@ -144,7 +144,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               onClick={() => navigate('/products')}
-              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[550px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               <img 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
@@ -170,7 +170,7 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               onClick={() => navigate('/products')}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg hover:shadow-2xl transition-all duration-500 reveal lg:col-span-1 md:col-span-2 lg:col-auto"
+              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[550px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 reveal lg:col-span-1 md:col-span-2 lg:col-auto"
             >
               <img 
                 src="/images/garden-category.webp" 

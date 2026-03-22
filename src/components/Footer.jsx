@@ -53,8 +53,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 dark:text-slate-400 text-xs">
-        <div>© {new Date().getFullYear()} {t('contact.corporate_name')}. {t('footer.rights')}</div>
+      <div className="max-w-7xl mx-auto px-8 py-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 dark:text-slate-400 text-xs text-center md:text-left">
+        <div>
+          © {new Date().getFullYear()} {t('contact.corporate_name')}. {t('footer.rights')}
+          <span className="md:inline hidden mx-2 text-slate-300 dark:text-slate-700">|</span>
+          <br className="md:hidden" />
+          <a href="https://omegatech.dev" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-bold tracking-tight">
+            {t('footer.created_by')} omegatech.dev
+          </a>
+        </div>
         <div className="flex gap-8">
           <a href="#" className="hover:text-primary transition-colors uppercase tracking-widest font-bold text-slate-700 dark:text-slate-400">{t('footer.privacy')}</a>
           <a href="#" className="hover:text-primary transition-colors uppercase tracking-widest font-bold text-slate-700 dark:text-slate-400">{t('footer.cookies')}</a>
