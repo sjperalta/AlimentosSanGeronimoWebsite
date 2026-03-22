@@ -120,7 +120,7 @@ const Products = () => {
         features={[t('products.roots_feature1'), t('products.roots_feature2')]}
         images={[
           { src: `${import.meta.env.BASE_URL}images/turmeric-experience.png`, alt: "Turmeric" },
-          { src: `${import.meta.env.BASE_URL}images/ginger-hero.png`, alt: "Ginger" }
+          { src: `${import.meta.env.BASE_URL}images/ginger-hero.webp`, alt: "Ginger" }
         ]}
       />
 
