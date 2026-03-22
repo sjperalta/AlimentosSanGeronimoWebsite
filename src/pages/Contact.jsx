@@ -52,9 +52,9 @@ const Contact = () => {
 
       <section className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="lg:col-span-5 space-y-12 text-left"
         >
           <div className="space-y-6">
@@ -123,9 +123,9 @@ const Contact = () => {
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="lg:col-span-7"
         >
           <div className="bg-white dark:bg-slate-900 rounded-3xl p-10 lg:p-16 border-4 border-slate-100 dark:border-slate-800 shadow-2xl text-left relative overflow-hidden">

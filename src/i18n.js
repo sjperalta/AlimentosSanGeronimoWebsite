@@ -19,7 +19,7 @@ i18n
           hero: {
             founded: 'Founded in 1985',
             legacy: 'Legacy Sagastume • Est. 1985',
-            title: 'Excellence from the Earth',
+            title: 'From the earth to your table, with firm roots',
             subtitle: 'Leading providers of high-quality Ginger, Turmeric, and Agricultural Solutions in Honduras and Guatemala.',
             cta_catalog: 'Explore Catalog',
             cta_contact: 'Contact Us',
@@ -110,6 +110,7 @@ i18n
           footer: {
             follow_us: 'Follow Us',
             rights: 'All rights reserved.',
+            created_by: 'Created by',
             description: 'Leading agricultural excellence through heritage and innovation since 1985.',
             explore: 'Explore',
             newsletter: 'Newsletter',
@@ -130,7 +131,7 @@ i18n
           hero: {
             founded: 'Fundada en 1985',
             legacy: 'Legado Sagastume • Est. 1985',
-            title: 'Excelencia de la Tierra',
+            title: 'De la tierra a tu mesa, con raíces firmes',
             subtitle: 'Proveedores líderes de Jengibre, Cúrcuma y Soluciones Agrícolas de alta calidad en Honduras y Guatemala.',
             cta_catalog: 'Explorar Catálogo',
             cta_contact: 'Contactar',
@@ -191,8 +192,8 @@ i18n
             vegetables_desc: 'Cosecha fresca de tomates, chiles, limones y otros productos agrícolas. Una selección vibrante e interesante que lleva la energía del trópico directamente a su cadena de distribución.',
             vegetables_feature1: 'Densidad nutricional y sabor óptimos',
             vegetables_feature2: 'Técnicas sostenibles de invernadero y campo abierto',
-            grass_title: 'Gramas San Agustín y Zoysia',
-            grass_desc: 'Variedades de grama de alta densidad como San Agustín y Zoysia, diseñadas para proyectos de paisajismo de lujo.',
+            grass_title: 'Gramas San Agustín y Soiza',
+            grass_desc: 'Variedades de grama de alta densidad como San Agustín y Soiza, diseñadas para proyectos de paisajismo de lujo.',
             grass_feature1: 'Crecimiento uniforme libre de malezas',
             grass_feature2: 'Variedades tropicales resistentes a sequías'
           },
@@ -221,6 +222,7 @@ i18n
           footer: {
             follow_us: 'Síguenos',
             rights: 'Todos los derechos reservados.',
+            created_by: 'Creado por',
             description: 'Liderando la excelencia agrícola a través de la herencia e innovación desde 1985.',
             explore: 'Explorar',
             newsletter: 'Boletín',

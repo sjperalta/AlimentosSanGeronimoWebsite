@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { BadgeCheck, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const ProductSection = ({ title, description, features, images, reverse = false, id }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
   return (
     <section id={id} className={`py-32 lg:py-48 relative overflow-hidden ${reverse ? 'bg-surface' : 'bg-surface-container-low'}`}>
@@ -34,6 +36,7 @@ const ProductSection = ({ title, description, features, images, reverse = false,
             <motion.button 
               whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 101, 44, 0.4)" }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/contact')}
               className="bg-gradient-to-br from-primary to-primary-container text-white px-12 py-5 rounded-full font-bold text-xl shadow-xl transition-all flex items-center gap-3"
             >
               {t('products.cta_contact')} <ArrowRight size={20} />
