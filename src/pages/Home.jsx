@@ -120,7 +120,14 @@ const Home = () => {
               onClick={() => navigate('/products')}
               className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="/images/ginger-category.webp" alt="Ginger" />
+              <img 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
+                src="/images/ginger-category.webp" 
+                alt="Ginger" 
+                width="512"
+                height="512"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
               <div className="absolute bottom-0 p-12 space-y-6 text-left">
                 <h3 className="text-4xl font-bold text-white">{t('business.ginger_title')}</h3>
@@ -139,7 +146,14 @@ const Home = () => {
               onClick={() => navigate('/products')}
               className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="/images/vegetables-category.webp" alt="Vegetables" />
+              <img 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
+                src="/images/vegetables-category.webp" 
+                alt="Vegetables" 
+                width="512"
+                height="512"
+                loading="lazy"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
               <div className="absolute bottom-0 p-12 space-y-6 text-left">
                 <h3 className="text-4xl font-bold text-white">{t('business.vegetables_title')}</h3>
@@ -159,10 +173,11 @@ const Home = () => {
               className="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg hover:shadow-2xl transition-all duration-500 reveal lg:col-span-1 md:col-span-2 lg:col-auto"
             >
               <img 
-                src={`${import.meta.env.BASE_URL}images/grass-business.webp`} 
+                src="/images/garden-category.webp" 
                 alt="Garden"
                 width="512"
                 height="512"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
