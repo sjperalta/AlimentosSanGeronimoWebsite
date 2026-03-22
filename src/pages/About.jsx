@@ -65,7 +65,7 @@ const About = () => {
                 <div className="aspect-[4/5] bg-surface rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                   <img
                     className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-110"
-                    src="/images/pompilio-animated.png"
+                    src="images/pompilio-animated.png"
                     alt="Pompilio Sagastume - Illustration"
                   />
                 </div>
@@ -140,7 +140,7 @@ const About = () => {
                 <div className="aspect-[4/5] bg-surface rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                   <img
                     className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
-                    src="/images/cristofer-manager.jpeg"
+                    src="images/cristofer-manager.jpeg"
                     alt="Cristopher Sagastume"
                   />
                 </div>

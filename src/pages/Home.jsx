@@ -18,7 +18,7 @@ const Home = () => {
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
             className="w-full h-full object-cover"
-            src="/images/ginger-hero.png"
+            src="images/ginger-hero.png"
             alt="Finca San Geronimo"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/95 via-on-primary-fixed/60 to-transparent"></div>
@@ -68,7 +68,7 @@ const Home = () => {
               className="hidden lg:block relative"
             >
               <div className="aspect-square rounded-3xl overflow-hidden border-8 border-white/10 backdrop-blur-3xl shadow-2xl">
-                <img className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="/images/ginger_alternative.png" alt="Calidad San Geronimo" />
+                <img className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="images/ginger_alternative.png" alt="Calidad San Geronimo" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl border border-black/5 animate-bounce-slow">
                 <div className="flex items-center gap-4">
@@ -180,7 +180,7 @@ const Home = () => {
             className="lg:w-1/2 relative"
           >
             <div className="aspect-square rounded-xl overflow-hidden shadow-2xl">
-              <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="/images/pompilio-real.png" alt="Pompilio Sagastume - Legacy" />
+              <img className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="images/pompilio-real.png" alt="Pompilio Sagastume - Legacy" />
             </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

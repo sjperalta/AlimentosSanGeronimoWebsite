@@ -17,7 +17,7 @@ const Contact = () => {
         >
           <img 
             className="absolute inset-0 w-full h-full object-cover" 
-            src="/images/vegetable-variety.png"
+            src="images/vegetable-variety.png"
             alt="Hero de contacto"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
