@@ -93,7 +93,7 @@ const Products = () => {
             className="relative"
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-surface-container shadow-2xl border-4 border-white dark:border-slate-800">
-              <img className="w-full h-full object-cover" src="images/turmeric-experience.png" alt="Vista de cultivos" />
+              <img className="w-full h-full object-cover" src={`${import.meta.env.BASE_URL}images/turmeric-experience.png`} alt="Vista de cultivos" />
             </div>
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -119,8 +119,8 @@ const Products = () => {
         description={t('products.roots_desc')}
         features={[t('products.roots_feature1'), t('products.roots_feature2')]}
         images={[
-          { src: "images/turmeric-experience.png", alt: "Turmeric" },
-          { src: "images/ginger-hero.png", alt: "Ginger" }
+          { src: `${import.meta.env.BASE_URL}images/turmeric-experience.png`, alt: "Turmeric" },
+          { src: `${import.meta.env.BASE_URL}images/ginger-hero.png`, alt: "Ginger" }
         ]}
       />
 
@@ -130,8 +130,8 @@ const Products = () => {
         description={t('products.vegetables_desc')}
         features={[t('products.vegetables_feature1'), t('products.vegetables_feature2')]}
         images={[
-          { src: "images/tomatoes-chiles.png", alt: "Tomatoes & Chilies" },
-          { src: "images/chiles.png", alt: "Chilies Harvest" }
+          { src: `${import.meta.env.BASE_URL}images/tomatoes-chiles.png`, alt: "Tomatoes & Chilies" },
+          { src: `${import.meta.env.BASE_URL}images/chiles.png`, alt: "Chilies Harvest" }
         ]}
         reverse={true}
       />
@@ -142,8 +142,8 @@ const Products = () => {
         description={t('products.grass_desc')}
         features={[t('products.grass_feature1'), t('products.grass_feature2')]}
         images={[
-          { src: "images/zoysia.png", alt: "St. Augustine & Zoysia Grass" },
-          { src: "images/grass.png", alt: "Zoysia Grass Landscaping" }
+          { src: `${import.meta.env.BASE_URL}images/zoysia.png`, alt: "St. Augustine & Zoysia Grass" },
+          { src: `${import.meta.env.BASE_URL}images/grass.png`, alt: "Zoysia Grass Landscaping" }
         ]}
       />
 
