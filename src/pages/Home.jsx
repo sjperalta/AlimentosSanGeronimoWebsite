@@ -20,6 +20,8 @@ const Home = () => {
             className="w-full h-full object-cover"
             src={`${import.meta.env.BASE_URL}images/ginger-hero.webp`}
             alt="Finca San Geronimo"
+            fetchPriority="high"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/95 via-on-primary-fixed/60 to-transparent"></div>
         </div>
@@ -118,7 +120,7 @@ const Home = () => {
               onClick={() => navigate('/products')}
               className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw529R2Yi2UwkE20TM-cJed5VyRDbDBAkv6TN2nxOlqOLBmShBM5-DMHueWnR24pbpcfN3h00Cb-X9kMoG69ycnIQvY9y8Mg4qa9FDwcWk36tsYTP5-P--6cNbp0bJJRSUfx8XVbj66pCokKIWbV3C747Gg0tk5Yln_2OVIQzIjjJEJjTeH51MOyS4NWuKC-CjO-NGTaA9zkKbrTE92d_Y4bXID1dr-PNfGarqNLeL4odAe9txRmjQVu_Fd26MZ_eOLkzICnFVah1a" alt="Ginger" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="/images/ginger-category.webp" alt="Ginger" />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
               <div className="absolute bottom-0 p-12 space-y-6 text-left">
                 <h3 className="text-4xl font-bold text-white">{t('business.ginger_title')}</h3>
@@ -137,7 +139,7 @@ const Home = () => {
               onClick={() => navigate('/products')}
               className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
             >
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqV3zARHBZAKyPjdane0KtlYCf7Z0tPebQa9xpOLxcDJTlFkq-dPHJNq9B0p5IWLKVHS9cKy87nWNVcYBIcxYcgIiVEnPR5tHFFlHLp7Nz53I7oR0AO5zoFpW-lMEUqjEohtCwqXZXQFg-lK0ZJ-_T5LPFqUR89KupA1Cp2SQH8ZEfWCQnL4O4STBlaF_WnLjZBWn2fIhqhULO9FQYf34N2NcFpz1-2ZPuxFACTt-x40HIUwti2xn2qD81ECT420iPRw5m5GMJyhI9" alt="Vegetables" />
+              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="/images/vegetables-category.webp" alt="Vegetables" />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
               <div className="absolute bottom-0 p-12 space-y-6 text-left">
                 <h3 className="text-4xl font-bold text-white">{t('business.vegetables_title')}</h3>
@@ -154,9 +156,15 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               onClick={() => navigate('/products')}
-              className="group relative overflow-hidden rounded-2xl bg-surface-container-low h-[600px] cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 lg:col-span-1 md:col-span-2 lg:col-auto"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg hover:shadow-2xl transition-all duration-500 reveal lg:col-span-1 md:col-span-2 lg:col-auto"
             >
-              <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQsexkjwXE3jZDnpdQR8s6paJ6qBYOnda24p5jsVEinHNEVoUdDMYLwkrBkBkSniu0uTf5QNkKk68Hy7kTWWnlMg71YVjJdfTx9e8neTNDd5VzCbchFcfZGQCnUWpyfnBy8gIB2Qz4B-QtPDTLQ4naJsy5Gw1u_e3Y72mTF6gl4algvL_2vMB59fgjW0myc2VZts-eWIvXmyq82lmNtOlwQvarPOWf8oSYTPMv1MeLd-vJwbx5T95mocvNIqjGM2FNgg1aHF8wYxUP" alt="Garden" />
+              <img 
+                src={`${import.meta.env.BASE_URL}images/grass-business.webp`} 
+                alt="Garden"
+                width="512"
+                height="512"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/95 via-on-surface/40 to-transparent"></div>
               <div className="absolute bottom-0 p-12 space-y-6 text-left">
                 <h3 className="text-4xl font-bold text-white">{t('business.grass_title')}</h3>
